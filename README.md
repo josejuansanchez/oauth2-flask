@@ -55,7 +55,7 @@ El cliente envía directamente el usuario y la contraseña del propietario del r
 
 ### **Flujo implícito (Implicit Flow)**
 
-Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y se prefiere el Authorization Code Flow con PKCE (_Proof Key for Code Exchange_).
+Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y se prefiere el Authorization Code Flow con [PKCE (_Proof Key for Code Exchange_)](https://auth-wiki.logto.io/es/pkce).
 
 ## 3. Diagrama del flujo de código de autorización
 
@@ -265,6 +265,9 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 
 - [OAuth Playground](https://www.oauth.com/playground/). Okta.
 - [OAuth Playground de Google](https://developers.google.com/oauthplayground/). Google.
-- [Introducción a OAuth 2](https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es). Digital Ocean.
+- [Introducción a OAuth 2.0](https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es). Digital Ocean.
+- [¿Qué es OAuth 2.0 ](https://auth-wiki.logto.io/es/oauth-2.0). Auth Wiki.
+- [¿Qué es OAuth 2.1?](https://auth-wiki.logto.io/es/oauth-2.1). Auth Wiki.
+- [¿Qué es Prueba de clave para el intercambio de códigos (Proof Key for Code Exchange, PKCE)?](https://auth-wiki.logto.io/es/pkce). Auth Wiki.
 - [Cross-site request forgery](https://es.wikipedia.org/wiki/Cross-site_request_forgery). Wikipedia.
 - [How to Use Google Playground OAuth 2.0 to Send Notifications Without Backend](https://medium.com/@arunb9525/how-to-use-google-playground-oauth-2-0-to-send-notifications-without-backend-ee9f5afcd8d5). Medium.
