@@ -100,7 +100,7 @@ El usuario se autentica y concede el permiso solicitado por la aplicación.
 
 **Paso 5**
 
-El servidor de autorización envía un **código de autorización** a la aplicación cliente, normalmente a través de una redirección como parámetro de una URL. Este código es **temporal**, **caduca rápidamente** y **sólo se puede usar una vez**. El código es visible en el navegador del cliente. Si un atacante intercepta este código, no podrá hacer nada con él porque para intercambiarlo por un **token de acceso** también necesitará el `CLIENT_ID` y `CLIENT_SECRET` de la aplicación cliente.
+El servidor de autorización envía un **código de autorización** a la aplicación cliente, normalmente a través de una redirección como parámetro de una URL. Este código es **temporal**, **caduca rápidamente** y **sólo se puede usar una vez**. El código es visible en el navegador del cliente. Si un atacante intercepta este código, no podrá hacer nada con él porque para intercambiarlo por un **token de acceso** también necesitará el `client_id` y `client_secret` de la aplicación cliente.
 
 En la URL de redirección, se envía el código de autorización como un parámetro `code`, junto con el parámetro `state` para que la aplicación cliente pueda verificar que coincide con el valor original y protegerse contra ataques [CSRF](https://es.wikipedia.org/wiki/Cross-site_request_forgery).
 
@@ -110,7 +110,7 @@ En la URL de redirección, se envía el código de autorización como un paráme
 
 **Paso 6**
 
-La aplicación cliente envía el **código de autorización** al servidor de autorización para intercambiarlo por un **token de acceso**. Esta comunicación se realiza entre servidores, sin pasar por el navegador del usuario. La aplicación cliente también deberá enviar su `CLIENT_ID` y `CLIENT_SECRET` junto al **código de autorización** para autenticar su identidad.
+La aplicación cliente envía el **código de autorización** al servidor de autorización para intercambiarlo por un **token de acceso**. Esta comunicación se realiza entre servidores, sin pasar por el navegador del usuario. La aplicación cliente también deberá enviar su `client_id` y `client_secret` junto al **código de autorización** para autenticar su identidad.
 
 A continuación, se muestra un ejemplo de cómo la aplicación cliente puede realizar esta petición `POST` al servidor de autorización para intercambiar el código de autorización por un token de acceso:
 
@@ -180,7 +180,7 @@ Se recomienda la lectura del artículo [How to Use Google Playground OAuth 2.0 t
 
 En la documentación oficial de GitHub se explica [cómo crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
-Siga los pasos de la documentación para registrar su aplicación y obtener el `CLIENT_ID` y `CLIENT_SECRET` necesarios para la autenticación OAuth 2.0.
+Siga los pasos de la documentación para registrar su aplicación y obtener el `client_id` y `client_secret` necesarios para la autenticación OAuth 2.0.
 
 ## 7. GitHub OAuth Scopes
 
@@ -238,9 +238,9 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     - **Descripción**: Descripción de la aplicación (opcional).
     - **Logo**: Logo de la aplicación (opcional).
 
-    Una vez que haya creado la OAuth App en GitHub, obtendrá un `CLIENT_ID` y un `CLIENT_SECRET`.
+    Una vez que haya creado la OAuth App en GitHub, obtendrá un `client_id` y un `client_secret`.
 
-5. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
+5. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `client_id` y `client_secret` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
 
     ```env
     GITHUB_CLIENT_ID=Ov23li242wunbSa95sv5
