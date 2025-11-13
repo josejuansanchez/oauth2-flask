@@ -1,5 +1,18 @@
 # OAuth 2.0. Autorización Delegada
 
+## Índice
+
+- [1. Introducción](#1-introducción)
+- [2. Flujos de OAuth 2.0](#2-flujos-de-oauth-20)
+- [3. Diagrama del flujo de código de autorización](#3-diagrama-del-flujo-de-código-de-autorización)
+- [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github)
+- [5. GitHub OAuth Scopes](#5-github-oauth-scopes)
+- [6. Cómo ejecutar la aplicación de ejemplo](#6-cómo-ejecutar-la-aplicación-de-ejemplo)
+- [7. Referencias](#7-referencias)
+
+
+## 1. Introducción
+
 **OAuth 2.0** es un estándar abierto que permite la **autorización delegada**. Su objetivo es permitir que una aplicación de terceros (el *cliente*) acceda a información protegida que está almacenada en un servidor, **sin que el usuario tenga que compartir sus credenciales** con esa aplicación.
 
 La especificación de OAuth 2.0 define varios roles fundamentales:
@@ -20,7 +33,7 @@ El servidor encargado de autenticar al propietario del recurso y emitir los *tok
 
 El servidor donde están almacenados los recursos protegidos a los que el cliente quiere acceder.
 
-## Flujo de OAuth 2.0
+## 2. Flujos de OAuth 2.0
 
 OAuth 2.0 se basa en **tokens de acceso** para otorgar autorización.
 Un token de acceso representa el permiso concedido a una aplicación para actuar en nombre del usuario.
@@ -43,7 +56,7 @@ El cliente envía directamente el usuario y la contraseña del propietario del r
 
 Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y se prefiere el Authorization Code Flow con PKCE.
 
-## Diagrama del flujo de código de autorización
+## 3. Diagrama del flujo de código de autorización
 
 ![](images/oauth20-flow.png)
 
@@ -69,11 +82,11 @@ Imagen obtenida de [IBM](https://www.ibm.com/docs/es/cics-ts/6.x?topic=cics-oaut
 
 10. La aplicación cliente entrega la respuesta final al usuario.
 
-## Cómo crear una OAuth App en GitHub
+## 4. Cómo crear una OAuth App en GitHub
 
 En la documentación oficial de GitHub se explica cómo [crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
-## GitHub OAuth Scopes
+## 5. GitHub OAuth Scopes
 
 Los **OAuth Scopes** definen los permisos que una aplicación solicita al usuario durante el proceso de autorización.
 
@@ -96,7 +109,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 | `public_repo` | Acceso a repositorios públicos |
 | `repo:status` | Ver estados de commits  |
 
-## Cómo ejecutar la aplicación de ejemplo
+## 6. Cómo ejecutar la aplicación de ejemplo
 
 1. Clona este repositorio:
 
@@ -129,7 +142,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 6. Abre tu navegador a la URL `http://localhost:4000` para interactuar con la aplicación.
 
 
-## Referencias
+## 7. Referencias
 
 - [OAuth Playground](https://www.oauth.com/playground/)
 - [Introducción a OAuth 2](https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es). Digital Ocean.
