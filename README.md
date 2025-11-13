@@ -139,12 +139,12 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     - **Homepage URL**: `http://localhost:4000`
     - **Authorization callback URL**: `http://localhost:4000/callback`
 
-De forma opcional puede añadir:
+    De forma opcional puede añadir:
 
     - **Descripción**: Descripción de la aplicación (opcional).
     - **Logo**: Logo de la aplicación (opcional).
 
-Una vez que haya creado la OAuth App en GitHub, obtendrá un `CLIENT_ID` y un `CLIENT_SECRET`.
+    Una vez que haya creado la OAuth App en GitHub, obtendrá un `CLIENT_ID` y un `CLIENT_SECRET`.
 
 5. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
 
