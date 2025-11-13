@@ -6,10 +6,11 @@
 - [2. Flujos de OAuth 2.0](#2-flujos-de-oauth-20)
 - [3. Diagrama del flujo de código de autorización](#3-diagrama-del-flujo-de-código-de-autorización)
 - [4. OAuth Playground](#4-oauth-playground)
-- [5. Cómo crear una OAuth App en GitHub](#5-cómo-crear-una-oauth-app-en-github)
-- [6. GitHub OAuth Scopes](#6-github-oauth-scopes)
-- [7. Cómo ejecutar la aplicación de ejemplo](#7-cómo-ejecutar-la-aplicación-de-ejemplo)
-- [8. Referencias](#8-referencias)
+- [5. OAuth Playground de Google](#5-oauth-playground-de-google)
+- [6. Cómo crear una OAuth App en GitHub](#6-cómo-crear-una-oauth-app-en-github)
+- [7. GitHub OAuth Scopes](#7-github-oauth-scopes)
+- [8. Cómo ejecutar la aplicación de ejemplo](#8-cómo-ejecutar-la-aplicación-de-ejemplo)
+- [9. Referencias](#9-referencias)
 
 ## 1. Introducción
 
@@ -169,13 +170,19 @@ La aplicación cliente entrega la respuesta final al usuario.
 
 Para entender mejor cómo funciona el **flujo de código de autorización (Authorization Code Flow)** de OAuth 2.0, se recomienda que haga uso de la herramienta [OAuth Playground](https://www.oauth.com/playground/), donde puede ir visualizando las URLs que se generan en cada paso del flujo de autorización para obtener un token de acceso.
 
-## 5. Cómo crear una OAuth App en GitHub
+## 5. OAuth Playground de Google
+
+Google también ofrece su propia herramienta llamada [OAuth Playground](https://developers.google.com/oauthplayground/) que permite experimentar con OAuth 2.0 utilizando los servicios de Google.
+
+Se recomienda la lectura del artículo [How to Use Google Playground OAuth 2.0 to Send Notifications Without Backend](https://medium.com/@arunb9525/how-to-use-google-playground-oauth-2-0-to-send-notifications-without-backend-ee9f5afcd8d5) y seguir los pasos que se describen en él para hacer un ejemplo práctico de OAuth 2.0 con los servicios de Google.
+
+## 6. Cómo crear una OAuth App en GitHub
 
 En la documentación oficial de GitHub se explica [cómo crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
 Siga los pasos de la documentación para registrar su aplicación y obtener el `CLIENT_ID` y `CLIENT_SECRET` necesarios para la autenticación OAuth 2.0.
 
-## 6. GitHub OAuth Scopes
+## 7. GitHub OAuth Scopes
 
 Los **OAuth Scopes** definen los permisos que una aplicación solicita al usuario durante el proceso de autorización.
 
@@ -198,7 +205,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 | `public_repo` | Acceso a repositorios públicos |
 | `repo:status` | Ver estados de commits  |
 
-## 7. Cómo ejecutar la aplicación de ejemplo
+## 8. Cómo ejecutar la aplicación de ejemplo
 
 1. Clona este repositorio:
 
@@ -220,7 +227,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     pip install -r requirements.txt
     ```
 
-4. Crea una nueva aplicación **OAuth App en GitHub** siguiendo las instrucciones del apartado [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github). En este paso tendrá que configurar los siguientes campos obligatorios:
+4. Crea una nueva aplicación **OAuth App en GitHub** siguiendo las instrucciones del apartado [6. Cómo crear una OAuth App en GitHub](#6-cómo-crear-una-oauth-app-en-github). En este paso tendrá que configurar los siguientes campos obligatorios:
 
     - **Application name**: Nombre de la aplicación.
     - **Homepage URL**: `http://localhost:4000`
@@ -254,7 +261,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 8. Una vez que tenga la aplicación de ejemplo funcionando, puede modificar los `scopes` para solicitar a GitHub autorización para acceder a diferentes recursos, como por ejemplo el acceso a los repositorios  públicos del usuario.
 
 
-## 8. Referencias
+## 9. Referencias
 
 - [OAuth Playground](https://www.oauth.com/playground/). Okta.
 - [OAuth Playground de Google](https://developers.google.com/oauthplayground/). Google.
