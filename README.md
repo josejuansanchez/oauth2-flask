@@ -55,7 +55,7 @@ El cliente envía directamente el usuario y la contraseña del propietario del r
 
 ### **Flujo implícito (Implicit Flow)**
 
-Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y se prefiere el Authorization Code Flow con PKCE.
+Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y se prefiere el Authorization Code Flow con PKCE (_Proof Key for Code Exchange_).
 
 ## 3. Diagrama del flujo de código de autorización
 
@@ -73,7 +73,7 @@ La aplicación cliente redirige al usuario hacia el servidor de autorización pa
 
 Una URL de ejemplo para esta redirección podría ser la siguiente:
 
-```bash
+```ini
 https://authorization-server.com/authorize?
   response_type=code
   &client_id=sOLra1TDVnbvI-o3bXUNVSmq
@@ -104,7 +104,7 @@ El servidor de autorización envía un **código de autorización** a la aplicac
 
 En la URL de redirección, se envía el código de autorización como un parámetro `code`, junto con el parámetro `state` para que la aplicación cliente pueda verificar que coincide con el valor original y protegerse contra ataques [CSRF](https://es.wikipedia.org/wiki/Cross-site_request_forgery).
 
-```bash
+```ini
 ?state=qDYUkZZFDj6QzMqZ&code=goGP9hzRk8r7GSaJX-3wjtWzWciilVXYOYzQmtBC2vSd6leA
 ```
 
@@ -114,7 +114,7 @@ La aplicación cliente envía el **código de autorización** al servidor de aut
 
 A continuación, se muestra un ejemplo de cómo la aplicación cliente puede realizar esta petición `POST` al servidor de autorización para intercambiar el código de autorización por un token de acceso:
 
-```bash
+```ini
 POST https://authorization-server.com/token
 
 grant_type=authorization_code
