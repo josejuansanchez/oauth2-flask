@@ -84,7 +84,7 @@ Imagen obtenida de [IBM](https://www.ibm.com/docs/es/cics-ts/6.x?topic=cics-oaut
 
 ## 4. Cómo crear una OAuth App en GitHub
 
-En la documentación oficial de GitHub se explica cómo [crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
+En la documentación oficial de GitHub se explica [cómo crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
 Siga los pasos de la documentación para registrar su aplicación y obtener el `CLIENT_ID` y `CLIENT_SECRET` necesarios para la autenticación OAuth 2.0.
 
@@ -133,7 +133,15 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     pip install -r requirements.txt
     ```
 
-4. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub.
+4. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
+
+    ```env
+    GITHUB_CLIENT_ID=Ov23li242wunbSa95sv5
+    GITHUB_CLIENT_SECRET=fb6b014592f529dc7c982e195272df3c025d1ec9
+    GITHUB_AUTH_URL=https://github.com/login/oauth/authorize
+    GITHUB_TOKEN_URL=https://github.com/login/oauth/access_token
+    GITHUB_API=https://api.github.com
+    ```
 
 5. Ejecuta la aplicación Flask:
 
