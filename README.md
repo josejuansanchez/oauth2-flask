@@ -116,7 +116,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 1. Clona este repositorio:
 
     ```bash
-    git clone https://github.com/josejuan/oauth2-flask.git
+    git clone https://github.com/josejuansanchez/oauth2-flask.git
     ```
 
 2. Navega al directorio del proyecto:
