@@ -133,7 +133,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     pip install -r requirements.txt
     ```
 
-4. Crea una nueva aplicación **OAuth App en GitHub** siguiendo las instrucciones del apartado [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github). En este apartado tendrá que indicar:
+4. Crea una nueva aplicación **OAuth App en GitHub** siguiendo las instrucciones del apartado [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github). En este paso tendrá que configurar los siguientes campos obligatorios:
 
     - **Application name**: Nombre de la aplicación.
     - **Homepage URL**: `http://localhost:4000`
