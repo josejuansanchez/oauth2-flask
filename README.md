@@ -125,7 +125,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     cd oauth2-flask/ejemplo
     ```
 
-3. Crea un entorno virtual e instale las dependencias:
+3. Crea un entorno virtual e instala las dependencias:
 
     ```bash
     python3 -m venv venv
@@ -133,7 +133,20 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     pip install -r requirements.txt
     ```
 
-4. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
+4. Crea una nueva aplicación **OAuth App en GitHub** siguiendo las instrucciones del apartado [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github). En este apartado tendrá que indicar:
+
+    - **Application name**: Nombre de la aplicación.
+    - **Homepage URL**: `http://localhost:4000`
+    - **Authorization callback URL**: `http://localhost:4000/callback`
+
+De forma opcional puede añadir:
+
+    - **Descripción**: Descripción de la aplicación (opcional).
+    - **Logo**: Logo de la aplicación (opcional).
+
+Una vez que haya creado la OAuth App en GitHub, obtendrá un `CLIENT_ID` y un `CLIENT_SECRET`.
+
+5. Crea un archivo `.env` y configura las variables de entorno necesarias. Tendrá que configurar el `CLIENT_ID` y `CLIENT_SECRET` de tu OAuth App de GitHub. Su archvo `.env` debería tener un aspecto similar a este:
 
     ```env
     GITHUB_CLIENT_ID=Ov23li242wunbSa95sv5
@@ -143,13 +156,13 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
     GITHUB_API=https://api.github.com
     ```
 
-5. Ejecuta la aplicación Flask:
+6. Ejecuta la aplicación Flask:
 
     ```bash
     python3 app.py
     ```
 
-6. Abre tu navegador a la URL `http://localhost:4000` para interactuar con la aplicación.
+7. Abre tu navegador a la URL `http://localhost:4000` para interactuar con la aplicación.
 
 
 ## 7. Referencias
