@@ -62,9 +62,11 @@ Diseñado originalmente para aplicaciones web sin backend. Hoy está en desuso y
 
 Imagen obtenida de [IBM](https://www.ibm.com/docs/es/cics-ts/6.x?topic=cics-oauth-20).
 
-1. El usuario (propietario del recurso) inicia una acción en la aplicación cliente.
+**Paso 1**
+El usuario (propietario del recurso) inicia una acción en la aplicación cliente.
 
-2. La aplicación cliente redirige al usuario hacia el servidor de autorización para solicitar permiso.
+**Paso 2**
+La aplicación cliente redirige al usuario hacia el servidor de autorización para solicitar permiso.
 
 Una URL de ejemplo para esta redirección podría ser la siguiente:
 
@@ -85,11 +87,14 @@ Veamos qué significa cada uno de los parámetros de esta URL:
 - `scope=photo+offline_access`: Son los permisos que la aplicación cliente está solicitando al servidor de autorización. Estos scopes son ficticios, cada aplicación puede definir sus propios scopes según los recursos a los que quiera acceder.
 - `state=qDYUkZZFDj6QzMqZ`: Es un valor aleatorio generado por la aplicación cliente para protegerse contra ataques de tipo [CSRF](https://es.wikipedia.org/wiki/Cross-site_request_forgery). Este valor se debe guardar en cliente y luego verificar que el `state` recibido en la respuesta del servidor de autorización coincide con el valor original.
 
-3. El servidor de autorización pide al usuario que se autentique y confirme la autorización para la aplicación cliente.
+**Paso 3**
+El servidor de autorización pide al usuario que se autentique y confirme la autorización para la aplicación cliente.
 
-4. El usuario se autentica y concede el permiso solicitado por la aplicación.
+**Paso 4**
+El usuario se autentica y concede el permiso solicitado por la aplicación.
 
-5. El servidor de autorización envía un **código de autorización** a la aplicación cliente, normalmente a través de una redirección como parámetro de una URL. Este código es **temporal**, **caduca rápidamente** y **sólo se puede usar una vez**. El código es visible en el navegador del cliente. Si un atacante intercepta este código, no podrá hacer nada con él porque para intercambiarlo por un **token de acceso** también necesitará el `CLIENT_ID` y `CLIENT_SECRET` de la aplicación cliente.
+**Paso 5**
+El servidor de autorización envía un **código de autorización** a la aplicación cliente, normalmente a través de una redirección como parámetro de una URL. Este código es **temporal**, **caduca rápidamente** y **sólo se puede usar una vez**. El código es visible en el navegador del cliente. Si un atacante intercepta este código, no podrá hacer nada con él porque para intercambiarlo por un **token de acceso** también necesitará el `CLIENT_ID` y `CLIENT_SECRET` de la aplicación cliente.
 
 En la URL de redirección, se envía el código de autorización como un parámetro `code`, junto con el parámetro `state` para que la aplicación cliente pueda verificar que coincide con el valor original y protegerse contra ataques [CSRF](https://es.wikipedia.org/wiki/Cross-site_request_forgery).
 
@@ -97,7 +102,8 @@ En la URL de redirección, se envía el código de autorización como un paráme
 ?state=qDYUkZZFDj6QzMqZ&code=goGP9hzRk8r7GSaJX-3wjtWzWciilVXYOYzQmtBC2vSd6leA
 ```
 
-6. La aplicación cliente envía el **código de autorización** al servidor de autorización para intercambiarlo por un **token de acceso**. Esta comunicación se realiza entre servidores, sin pasar por el navegador del usuario. La aplicación cliente también deberá enviar su `CLIENT_ID` y `CLIENT_SECRET` junto al **código de autorización** para autenticar su identidad.
+**Paso 6**
+La aplicación cliente envía el **código de autorización** al servidor de autorización para intercambiarlo por un **token de acceso**. Esta comunicación se realiza entre servidores, sin pasar por el navegador del usuario. La aplicación cliente también deberá enviar su `CLIENT_ID` y `CLIENT_SECRET` junto al **código de autorización** para autenticar su identidad.
 
 A continuación, se muestra un ejemplo de cómo la aplicación cliente puede realizar esta petición `POST` al servidor de autorización para intercambiar el código de autorización por un token de acceso:
 
@@ -117,7 +123,8 @@ Veamos qué significa cada uno de los parámetros de esta petición `POST`:
 - `client_secret=exng_I0BRpTTxZ7M4Abyv25cjYIjpgDBscUwU60E1GB5dX_B`: Secreto compartido entre la aplicación cliente y el servidor de autorización.
 - `code=goGP9hzRk8r7GSaJX-3wjtWzWciilVXYOYzQmtBC2vSd6leA`: El código de autorización recibido en el paso 5.
 
-7. El servidor de autorización devuelve un **token de acceso** a la aplicación cliente.
+**Paso 7**
+El servidor de autorización devuelve un **token de acceso** a la aplicación cliente.
 
 Un posible token de acceso podría ser el siguiente:
 
@@ -139,11 +146,14 @@ Veamos qué significa cada uno de los campos del token de acceso:
 - `scope`: Indica los permisos que han sido concedidos al token de acceso. En este caso, el token tiene permisos para acceder a `photo` y `offline_access`.
 - `refresh_token`: Es un token que puede ser utilizado para obtener un nuevo token de acceso una vez que el token actual haya expirado.
 
-8. La aplicación cliente usa el token de acceso para solicitar el recurso protegido al servidor de recursos.
+**Paso 8**
+La aplicación cliente usa el token de acceso para solicitar el recurso protegido al servidor de recursos.
 
-9. El servidor de recursos responde a la aplicación cliente con la información solicitada.
+**Paso 9**
+El servidor de recursos responde a la aplicación cliente con la información solicitada.
 
-10. La aplicación cliente entrega la respuesta final al usuario.
+**Paso 10**
+La aplicación cliente entrega la respuesta final al usuario.
 
 ## 4. OAuth Playground
 
