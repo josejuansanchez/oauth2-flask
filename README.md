@@ -5,8 +5,8 @@
 - [1. Introducción](#1-introducción)
 - [2. Flujos de OAuth 2.0](#2-flujos-de-oauth-20)
 - [3. Diagrama del flujo de código de autorización](#3-diagrama-del-flujo-de-código-de-autorización)
-- [4. OAuth Playground](#4-oauth-playground)
-- [5. OAuth Playground de Google](#5-oauth-playground-de-google)
+- [4. OAuth 2.0 Playground](#4-oauth-playground)
+- [5. OAuth 2.0 Playground de Google](#5-oauth-playground-de-google)
 - [6. Cómo crear una OAuth App en GitHub](#6-cómo-crear-una-oauth-app-en-github)
 - [7. GitHub OAuth Scopes](#7-github-oauth-scopes)
 - [8. Cómo ejecutar la aplicación de ejemplo](#8-cómo-ejecutar-la-aplicación-de-ejemplo)
@@ -166,13 +166,13 @@ El servidor de recursos responde a la aplicación cliente con la información so
 
 La aplicación cliente entrega la respuesta final al usuario.
 
-## 4. OAuth Playground
+## 4. OAuth 2.0 Playground
 
-Para entender mejor cómo funciona el **flujo de código de autorización (Authorization Code Flow)** de OAuth 2.0, se recomienda que haga uso de la herramienta [OAuth Playground](https://www.oauth.com/playground/), donde puede ir visualizando las URLs que se generan en cada paso del flujo de autorización para obtener un token de acceso.
+Para entender mejor cómo funciona el **flujo de código de autorización (Authorization Code Flow)** de OAuth 2.0, se recomienda que haga uso de la herramienta [OAuth 2.0 Playground](https://www.oauth.com/playground/) de la empresa Okta, donde puede ir visualizando las URLs que se generan en cada paso del flujo de autorización para obtener un token de acceso.
 
-## 5. OAuth Playground de Google
+## 5. OAuth 2.0 Playground de Google
 
-Google también ofrece su propia herramienta llamada [OAuth Playground](https://developers.google.com/oauthplayground/) que permite experimentar con OAuth 2.0 utilizando los servicios de Google.
+Google también ofrece su propia herramienta llamada [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/) que permite experimentar con OAuth 2.0 utilizando los servicios de Google.
 
 Se recomienda la lectura del artículo [How to Use Google Playground OAuth 2.0 to Send Notifications Without Backend](https://medium.com/@arunb9525/how-to-use-google-playground-oauth-2-0-to-send-notifications-without-backend-ee9f5afcd8d5) y seguir los pasos que se describen en él para hacer un ejemplo práctico de OAuth 2.0 con los servicios de Google.
 
