@@ -173,6 +173,6 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 
 ## 8. Referencias
 
-- [OAuth Playground](https://www.oauth.com/playground/)
+- [OAuth Playground](https://www.oauth.com/playground/). Okta.
 - [Introducción a OAuth 2](https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es). Digital Ocean.
 - [Cross-site request forgery](https://es.wikipedia.org/wiki/Cross-site_request_forgery). Wikipedia.
