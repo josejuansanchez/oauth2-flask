@@ -164,6 +164,8 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 
 7. Abre tu navegador a la URL `http://localhost:4000` para interactuar con la aplicación.
 
+8. Una vez que tenga la aplicación de ejemplo funcionando, puede modificar los `scopes` para solicitar a GitHub autorización para acceder a diferentes recursos, como por ejemplo el acceso a los repositorios  públicos del usuario.
+
 
 ## 7. Referencias
 
