@@ -86,6 +86,8 @@ Imagen obtenida de [IBM](https://www.ibm.com/docs/es/cics-ts/6.x?topic=cics-oaut
 
 En la documentación oficial de GitHub se explica cómo [crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
+Siga los pasos de la documentación para registrar su aplicación y obtener el `CLIENT_ID` y `CLIENT_SECRET` necesarios para la autenticación OAuth 2.0.
+
 ## 5. GitHub OAuth Scopes
 
 Los **OAuth Scopes** definen los permisos que una aplicación solicita al usuario durante el proceso de autorización.
