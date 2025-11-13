@@ -5,11 +5,11 @@
 - [1. Introducción](#1-introducción)
 - [2. Flujos de OAuth 2.0](#2-flujos-de-oauth-20)
 - [3. Diagrama del flujo de código de autorización](#3-diagrama-del-flujo-de-código-de-autorización)
-- [4. Cómo crear una OAuth App en GitHub](#4-cómo-crear-una-oauth-app-en-github)
-- [5. GitHub OAuth Scopes](#5-github-oauth-scopes)
-- [6. Cómo ejecutar la aplicación de ejemplo](#6-cómo-ejecutar-la-aplicación-de-ejemplo)
-- [7. Referencias](#7-referencias)
-
+- [4. OAuth Playground](#4-oauth-playground)
+- [5. Cómo crear una OAuth App en GitHub](#5-cómo-crear-una-oauth-app-en-github)
+- [6. GitHub OAuth Scopes](#6-github-oauth-scopes)
+- [7. Cómo ejecutar la aplicación de ejemplo](#7-cómo-ejecutar-la-aplicación-de-ejemplo)
+- [8. Referencias](#8-referencias)
 
 ## 1. Introducción
 
@@ -82,13 +82,17 @@ Imagen obtenida de [IBM](https://www.ibm.com/docs/es/cics-ts/6.x?topic=cics-oaut
 
 10. La aplicación cliente entrega la respuesta final al usuario.
 
-## 4. Cómo crear una OAuth App en GitHub
+## 4. OAuth Playground
+
+Para entender mejor cómo funciona el **flujo de código de autorización (Authorization Code Flow)** de OAuth 2.0, se recomienda que haga uso de la herramienta [OAuth Playground](https://www.oauth.com/playground/), donde puede ir visualizando las URLs que se generan en cada paso del flujo de autorización para obtener un token de acceso.
+
+## 5. Cómo crear una OAuth App en GitHub
 
 En la documentación oficial de GitHub se explica [cómo crear una OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
 Siga los pasos de la documentación para registrar su aplicación y obtener el `CLIENT_ID` y `CLIENT_SECRET` necesarios para la autenticación OAuth 2.0.
 
-## 5. GitHub OAuth Scopes
+## 6. GitHub OAuth Scopes
 
 Los **OAuth Scopes** definen los permisos que una aplicación solicita al usuario durante el proceso de autorización.
 
@@ -111,7 +115,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 | `public_repo` | Acceso a repositorios públicos |
 | `repo:status` | Ver estados de commits  |
 
-## 6. Cómo ejecutar la aplicación de ejemplo
+## 7. Cómo ejecutar la aplicación de ejemplo
 
 1. Clona este repositorio:
 
@@ -167,7 +171,7 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 8. Una vez que tenga la aplicación de ejemplo funcionando, puede modificar los `scopes` para solicitar a GitHub autorización para acceder a diferentes recursos, como por ejemplo el acceso a los repositorios  públicos del usuario.
 
 
-## 7. Referencias
+## 8. Referencias
 
 - [OAuth Playground](https://www.oauth.com/playground/)
 - [Introducción a OAuth 2](https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es). Digital Ocean.
