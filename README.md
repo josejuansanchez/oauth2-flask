@@ -207,6 +207,8 @@ En la documentación oficial de GitHub puede encontrar una lista completa de los
 
 ## 8. Cómo ejecutar la aplicación de ejemplo
 
+La aplicación de ejemplo que se incluye en este repositorio utiliza Flask para implementar el flujo de código de autorización de OAuth 2.0 con GitHub como proveedor de OAuth. Los scopes que se solicitan en este ejemplo son `read:user` y `user:email` para obtener información básica del usuario autenticado.
+
 1. Clona este repositorio:
 
     ```bash
